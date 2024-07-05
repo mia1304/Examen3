@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Estado de las Habitaciones</title>
+</head>
+<body>
+    <h1>Estado de las Habitaciones</h1>
+    <table border="1">
+        <tr>
+            <th>Habitación</th>
+            <th>Nombre</th>
+            <th>Estado</th>
+        </tr>
+        {% for num, info in habitaciones.items() %}
+        <tr>
+            <td>{{ num }}</td>
+            <td>{{ info.nombre }}</td>
+            <td>{{ 'Reservada' if info.reservada else 'No Reservada' }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
